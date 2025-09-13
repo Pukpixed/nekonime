@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "888721889364",
+    "project_id": "nekonime11-8d137",
+    "storage_bucket": "nekonime11-8d137.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888721889364:android:a6fe095f5cb4d78029f5c1",
+        "android_client_info": {
+          "package_name": "com.example.learn_flutter_67_12"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLL2RV_-FivcrkJfAE4bAg2VZi8-DciMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888721889364:android:2c248b35d0fcf91829f5c1",
+        "android_client_info": {
+          "package_name": "com.example.nekonime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLL2RV_-FivcrkJfAE4bAg2VZi8-DciMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888721889364:android:e992d86088eb70b329f5c1",
+        "android_client_info": {
+          "package_name": "com.example.nekonime1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLL2RV_-FivcrkJfAE4bAg2VZi8-DciMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,49 +1,44 @@
-//Step 5: Make firestore service
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FirestoreService {
-  final CollectionReference persons = FirebaseFirestore.instance.collection(
-    'persons',
-  );
+  final CollectionReference animeCollection =
+      FirebaseFirestore.instance.collection('anime');
 
-  // Create
-  Future<void> addPerson(String personName, String personEmail, int personAge) {
-    return persons.add({
-      'personname': personName,
-      'personemail': personEmail,
-      'personage': personAge,
-      'timestamp': Timestamp.now(),
+  // เพิ่มข้อมูลอนิเมะ
+  Future<void> addAnime(String name, int episode, int season, double score) {
+    return animeCollection.add({
+      'name': name,
+      'episode': episode,
+      'season': season,
+      'score': score,
+      'createdAt': FieldValue.serverTimestamp(),
     });
   }
 
-  // Read (stream data)
-  Stream<QuerySnapshot> getPersons() {
-    return persons.orderBy('timestamp', descending: true).snapshots();
+  // ดึงข้อมูลอนิเมะทั้งหมด (Stream)
+  Stream<QuerySnapshot> getAnimes() {
+    return animeCollection.orderBy('createdAt', descending: true).snapshots();
   }
 
-  // Get by Id
-  Future<Map<String, dynamic>?> getPersonById(String personId) async {
-    final doc = await persons.doc(personId).get();
+  // ดึงอนิเมะตาม id
+  Future<Map<String, dynamic>?> getAnimeById(String id) async {
+    DocumentSnapshot doc = await animeCollection.doc(id).get();
     return doc.data() as Map<String, dynamic>?;
   }
 
-  // Update
-  Future<void> updatePerson(
-    String personId,
-    String personName,
-    String personEmail,
-    int personAge,
-  ) {
-    return persons.doc(personId).update({
-      'personname': personName,
-      'personemail': personEmail,
-      'personage': personAge,
-      'timestamp': Timestamp.now(),
+  // อัปเดตข้อมูลอนิเมะ
+  Future<void> updateAnime(
+      String id, String name, int episode, int season, double score) {
+    return animeCollection.doc(id).update({
+      'name': name,
+      'episode': episode,
+      'season': season,
+      'score': score,
     });
   }
 
-  // Delete
-  Future<void> deletePerson(String personId) {
-    return persons.doc(personId).delete();
+  // ลบอนิเมะ
+  Future<void> deleteAnime(String id) {
+    return animeCollection.doc(id).delete();
   }
 }

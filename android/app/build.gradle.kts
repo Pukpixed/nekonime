@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.learn_flutter_67_12"
+    namespace = "com.example.nekonime"
     compileSdk = flutter.compileSdkVersion
     // ✅ ใช้ NDK เวอร์ชันที่ plugin ต้องการ
     ndkVersion = "27.0.12077973"
@@ -24,9 +24,9 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.learn_flutter_67_12"
-        // ✅ ต้องใช้ minSdk = 23 สำหรับ cloud_firestore
-        minSdk = 23
+        applicationId = "com.example.nekonime"
+        // ✅ ต้องใช้ minSdk = 23 สำหรับ cloud_firestore และ plugin ใหม่ ๆ
+        minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
