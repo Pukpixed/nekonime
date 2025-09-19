@@ -164,7 +164,7 @@ class _SecondScreenState extends State<SecondScreen> {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: Colors.amber, width: 3),
+                      borderSide: const BorderSide(color: Colors.amber, width: 3),
                     ),
                   ),
                 ),
@@ -235,7 +235,16 @@ class _SecondScreenState extends State<SecondScreen> {
         child: Column(
           children: [
             AppBar(
-              title: const Text("Anime Journal"),
+              title: const Text(
+                "Anime Journal",
+                style: TextStyle(
+                  fontSize: 28, // ✅ ทำให้ข้อความใหญ่ขึ้น
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  letterSpacing: 1.2,
+                ),
+              ),
+              centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0,
               automaticallyImplyLeading: false,
